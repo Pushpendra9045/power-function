@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;;
+
+//creating class name power
+class power
+{
+    private:
+    float m;
+    int n;
+    public:
+    //declaring and defining function power
+    power(float m1,int n1=2)
+    {
+        m=m1;
+        n=n1;
+    }
+    //defining function for to get data
+    void get_m_n()
+    {
+        cout<<"m:"<<m<<"n:"<<n<<endl;
+    }
+    
+    //function to calculate the power of  two; 
+    float pow()
+    {
+        double ans=1.0;
+        for(int i=0;i<n;i++)
+        {
+            ans*=m;
+        }
+        return ans;
+    }
+};
+int main()
+{
+    //declaring the object as obj1;
+    power obj1(2.0);
+    //displaying the result for user
+    cout<<obj1.pow()<<endl;
+    //declaring the object as obj2
+    power obj2(2.0,3);
+    //displaying the result of obj2;
+    cout<<obj2.pow()<<endl;
+    return 0;
+}
